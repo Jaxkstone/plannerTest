@@ -1,0 +1,56 @@
+.app-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-label,
+.button{
+  margin: 20px 50px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.button{
+  display: flex;
+  margin-top: -50px;
+  margin-left: auto;
+}
+
+.button button{
+  display: flex;
+  align-items: center;
+}
+
+.button button:not(:first-child){
+  margin-left: 20px;
+}
+
+.todoList{
+  display: flex;
+  flex-direction: column;
+  margin: 30px 80px 0;
+}
+
+.todoItem{
+  display: flex;
+  padding: 10px 30px;
+  margin-bottom: 5px;
+  background: #fff8e1;
+}
+
+.todoItem label{
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .material-icons{
+    margin-left: auto;
+  }
+}
+
+.checkPreloader .preloader-wrapper{
+  width: 20px;
+  height: 20px;
+}
