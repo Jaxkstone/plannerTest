@@ -8,10 +8,9 @@ interface todoListProps {
     deleteTodoAll: () => any
     deleteCompletedTodo: (idCompleted: number[]) => any
     completedTodo: (id: number, completed: boolean) => any
-    isFetchingComplete: boolean
 }
 
-const TodoList: React.FC<todoListProps> = ({todos, isFetchingComplete, getMyTodos, deleteTodo, deleteTodoAll, completedTodo, deleteCompletedTodo}) => {
+const TodoList: React.FC<todoListProps> = ({todos, getMyTodos, deleteTodo, deleteTodoAll, completedTodo, deleteCompletedTodo}) => {
 
     useMemo(() => {
         getMyTodos()

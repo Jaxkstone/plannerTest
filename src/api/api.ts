@@ -1,10 +1,7 @@
 import axios from "axios";
 
 const instanse = axios.create({
-    baseURL: `http://localhost:4000/api/`,
-    //open key = FMWWRDOF
-    //Private key = 29165b1b-a34f-4999-9d4f-8e9799b9d37d
-    //id project = 5df1108fff7a25af8a26255c
+    baseURL: `http://localhost:4000/api/`
 })
 
 export const todoApi = {

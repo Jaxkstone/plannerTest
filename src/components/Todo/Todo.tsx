@@ -21,17 +21,15 @@ interface ITodoList {
     deleteTodoAll(): any
     completedTodo(): any
     deleteCompletedTodo(): any
-    isFetchingComplete:boolean
 }
 
-const Todo: React.FC<ITodoList> = ({ todos, isFetchingComplete, getMyTodos, createTodo, deleteTodo,
+const Todo: React.FC<ITodoList> = ({ todos, getMyTodos, createTodo, deleteTodo,
                                      deleteTodoAll, completedTodo, deleteCompletedTodo }) => {
 
     return (
         <>
             <TodoInput createTodo={createTodo}/>
             <TodoList todos={todos}
-                      isFetchingComplete={isFetchingComplete}
                       getMyTodos={getMyTodos}
                       deleteTodo={deleteTodo}
                       deleteTodoAll={deleteTodoAll}
@@ -45,7 +43,6 @@ const Todo: React.FC<ITodoList> = ({ todos, isFetchingComplete, getMyTodos, crea
 const mapStateToProps = (state:any) => {
     return {
         todos: state.todos.todos,
-        isFetchingComplete: state.todos.isFetchingComplete
     }
 }
 
